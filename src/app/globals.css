@@ -1,0 +1,1177 @@
+:root {
+  --paper:#faf9f6;
+  --ink:#173659;
+  --muted:#52667b;
+  --blue:#205fa7;
+  --light-blue:#e1edf9;
+  --line:#dbe2e7;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:Arial,Helvetica,sans-serif;
+  --radius:24px;
+  --content:1200px
+}
+
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:100px
+}
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased
+}
+a {
+  color:inherit;
+  text-decoration:none
+}
+button {
+  font:inherit;
+  color:inherit
+}
+button,a {
+  -webkit-tap-highlight-color:transparent
+}
+button {
+  cursor:pointer
+}
+img {
+  object-fit:cover
+}
+h1,h2,h3,p {
+  margin:0
+}
+h1,h2,h3 {
+  font-weight:700
+}
+h1,h2,h3,blockquote {
+  font-family:var(--serif)
+}
+em {
+  font-weight:inherit;
+  color:#3976b5
+}
+::selection {
+  background:#cee0f2;
+  color:#213e60
+}
+:focus-visible {
+  outline:3px solid #4388ce;
+  outline-offset:6px
+}
+.container {
+  width:min(var(--content),calc(100% - 112px));
+  margin-inline:auto
+}
+.section-space {
+  padding-block:110px
+}
+.eyebrow {
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  font-size:11px;
+  font-weight:700;
+  line-height:1.6
+}
+h2 {
+  font-size:clamp(34px,3.5vw,50px);
+  line-height:1.22;
+  letter-spacing:-1.5px
+}
+.site-header {
+  height:99px;
+  margin-inline:auto;
+  width:min(1320px,calc(100% - 96px));
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  gap:20px
+}
+.wordmark {
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:46px;
+  line-height:1;
+  letter-spacing:-3px
+}
+.wordmark span {
+  display:inline-block;
+  font-family:var(--sans);
+  font-size:21px;
+  vertical-align:top;
+  margin:0 0 0 4px;
+  color:#7096b8;
+  letter-spacing:0
+}
+.site-header nav {
+  display:flex;
+  gap:36px;
+  font-size:12px;
+  font-weight:600
+}
+.site-header nav a {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  position:relative;
+  padding-block:15px;
+  color:var(--muted)
+}
+.site-header nav a[aria-current=page] {
+  color:var(--ink)
+}
+.site-header nav a[aria-current=page]:after {
+  content:'';
+  position:absolute;
+  bottom:4px;
+  left:0;
+  width:18px;
+  height:2px;
+  background:var(--blue)
+}
+.header-note {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-size:11px;
+  color:var(--muted)
+}
+.hero {
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  align-items:center;
+  min-height:720px;
+  padding-block:62px 78px;
+  gap:60px
+}
+.hero-copy .eyebrow {
+  display:flex;
+  align-items:center;
+  gap:12px
+}
+.tiny-star {
+  font-size:22px;
+  color:#6d94b6
+}
+.hero h1 {
+  font-size:clamp(65px,7.8vw,110px);
+  line-height:1.01;
+  letter-spacing:-5px;
+  margin:26px 0 22px;
+  position:relative
+}
+.heading-star {
+  font-size:57px;
+  color:#8caeca;
+  position:absolute;
+  margin-left:16px;
+  bottom:8px;
+  font-style:normal
+}
+.full-name {
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:.2px
+}
+.full-name span {
+  display:block;
+  font-size:10px;
+  letter-spacing:5px;
+  margin-top:5px
+}
+.hero-description {
+  font-size:14px;
+  line-height:1.9;
+  color:var(--muted);
+  margin:24px 0 29px
+}
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:27px;
+  padding:17px 25px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:700;
+  transition:background .2s,transform .2s
+}
+.button:hover {
+  transform:translateY(-2px)
+}
+.button-primary {
+  background:var(--blue);
+  color:white;
+  box-shadow:0 7px 18px #205fa71c
+}
+.button-primary:hover {
+  background:#1d4670
+}
+.button-outline {
+  border:1px solid #b9c9d8;
+  background:transparent
+}
+.button-outline:hover {
+  background:var(--light-blue)
+}
+.scroll-note {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:10px;
+  color:var(--muted);
+  margin-top:38px
+}
+.scroll-note>span {
+  border:1px solid #d6dfe7;
+  border-radius:50%;
+  width:29px;
+  height:29px;
+  display:grid;
+  place-items:center
+}
+.hero-art {
+  position:relative;
+  padding:20px 10px 25px;
+  isolation:isolate
+}
+.hero-photo {
+  position:relative;
+  aspect-ratio: .82;
+  border-radius:48% 48% 5px 5px;
+  overflow:hidden;
+  background:#dbe7f0;
+  transform:rotate(3deg);
+  border:9px solid white;
+  box-shadow:0 22px 50px #25466625
+}
+.hero-photo img {
+  object-position:center 39%
+}
+.orbit {
+  position:absolute;
+  z-index:-1;
+  border:2px solid #b6cfe6;
+  border-radius:50%;
+  width:115%;
+  height:82%;
+  top:9%;
+  left:-7%;
+  transform:rotate(-28deg)
+}
+.orbit-two {
+  transform:rotate(27deg);
+  width:111%;
+  height:89%;
+  left:-5%;
+  top:3%
+}
+.hero-sparkle {
+  position:absolute;
+  right:-20px;
+  top:-16px;
+  z-index:1;
+  font-size:75px;
+  color:#89aac5;
+  line-height:1
+}
+.love-stamp {
+  position:absolute;
+  bottom:70px;
+  left:-46px;
+  width:115px;
+  height:115px;
+  border:6px solid var(--paper);
+  outline:1px dashed #b5cadd;
+  outline-offset:-12px;
+  background:#cee3f7;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transform:rotate(-12deg);
+  gap:3px
+}
+.love-stamp span {
+  text-align:center;
+  font-size:10px;
+  line-height:1.1
+}
+.love-stamp em {
+  font-family:var(--serif);
+  font-size:25px;
+  color:var(--ink)
+}
+.hero-photo-note {
+  display:block;
+  text-align:right;
+  margin-top:23px;
+  font-family:var(--serif);
+  font-style:italic;
+  color:#738ba2;
+  font-size:17px;
+  transform:rotate(-4deg)
+}
+.small-sparkle {
+  position:absolute;
+  right:-15px;
+  bottom:30px;
+  font-size:40px;
+  color:#95b3cd
+}
+.joy-ribbon {
+  border-block:1px solid #205fa7;
+  background:var(--blue);
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:22px 20px;
+  gap:20px;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#fff
+}
+.joy-ribbon [aria-hidden] {
+  font-size:21px;
+  color:#bcdcff
+}
+.names-section {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center
+}
+.section-intro h2 {
+  margin:18px 0 21px;
+  font-size:38px
+}
+.section-intro>p:last-child {
+  font-size:12px;
+  color:var(--muted)
+}
+.name-meanings {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px
+}
+.name-meanings article {
+  padding:13px 0 14px 25px;
+  border-left:1px solid #d1dfe9
+}
+.meaning-number {
+  font-size:9px;
+  letter-spacing:1.8px;
+  color:var(--muted)
+}
+.name-meanings h3 {
+  font-size:35px;
+  margin-top:23px;
+  letter-spacing:-1px;
+  display:flex;
+  align-items:center;
+  gap:14px
+}
+.name-meanings h3 span {
+  font-size:23px;
+  color:#9ab3cb
+}
+.name-meanings .meaning {
+  font-size:12px;
+  margin-block:5px 16px
+}
+.name-meanings article>p:last-child {
+  font-size:11px;
+  color:var(--muted);
+  max-width:165px
+}
+.album-section {
+  background:#e1ecf6
+}
+.section-top {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:48px
+}
+.section-top h2 {
+  margin-top:17px
+}
+.section-top>p {
+  color:var(--muted);
+  font-size:12px
+}
+.album-hint {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:10px;
+  margin-top:17px
+}
+.album-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:28px
+}
+.album-photo {
+  background:transparent;
+  border:0;
+  padding:0;
+  text-align:left;
+  min-width:0
+}
+.album-image {
+  position:relative;
+  height:280px;
+  overflow:hidden;
+  border-radius:4px
+}
+.album-photo:first-child {
+  grid-row:span 2
+}
+.album-photo:first-child .album-image {
+  height:calc(100% - 35px);
+  min-height:560px
+}
+.album-image img {
+  transition:transform .5s
+}
+.album-photo:hover img {
+  transform:scale(1.035)
+}
+.photo-caption {
+  display:flex;
+  justify-content:space-between;
+  padding-top:12px;
+  font-size:11px;
+  gap:10px
+}
+.photo-caption>span:last-child {
+  color:#8897a4;
+  font-size:9px
+}
+.expand-icon {
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  border:1px solid #ffffff70;
+  background:#ffffffd9;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center
+}
+.family-section {
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:115px;
+  align-items:center
+}
+.family-photos {
+  position:relative;
+  padding:0 85px 60px 0
+}
+.family-main {
+  position:relative;
+  height:450px;
+  transform:rotate(-4deg);
+  border:7px solid #fff;
+  box-shadow:0 10px 30px #1e3d5d10
+}
+.family-small {
+  position:absolute;
+  width:49%;
+  height:285px;
+  bottom:35px;
+  right:0;
+  transform:rotate(7deg);
+  border:7px solid white;
+  box-shadow:0 10px 30px #1e3d5d14
+}
+.family-note {
+  position:absolute;
+  left:20px;
+  bottom:0;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:20px;
+  color:#7792aa;
+  transform:rotate(-4deg)
+}
+.family-copy h2 {
+  margin:18px 0 25px
+}
+.family-copy>p:not(.eyebrow) {
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:18px
+}
+.signature {
+  display:block;
+  margin-top:30px;
+  font-style:italic;
+  font-family:var(--serif);
+  font-size:22px;
+  color:#6484a1
+}
+.ceremony-invite {
+  position:relative;
+  background:#173f70;
+  color:#fff;
+  border:1px solid #173f70;
+  border-radius:var(--radius);
+  text-align:center;
+  padding:65px 30px;
+  margin-bottom:85px;
+  overflow:hidden
+}
+.ceremony-invite h2 {
+  margin:20px 0 17px
+}
+ .ceremony-invite>p:not(.eyebrow) {
+  color:#d9e7f5;
+  font-size:13px;
+  margin-bottom:26px
+}
+.invite-star {
+  position:absolute;
+  font-size:170px;
+  left:-35px;
+  bottom:-68px;
+  line-height:1;
+  color:#2b5787
+}
+.site-footer {
+  width:min(1320px,calc(100% - 96px));
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding:32px 0 38px;
+  gap:20px
+}
+.site-footer .wordmark {
+  font-size:35px
+}
+.site-footer p,.site-footer>span {
+  font-size:10px;
+  color:var(--muted)
+}
+.site-footer>span {
+  display:flex;
+  align-items:center;
+  gap:5px
+}
+.skip-link {
+  position:fixed;
+  top:10px;
+  left:10px;
+  transform:translateY(-160%);
+  z-index:20;
+  background:white;
+  padding:10px 20px
+}
+.skip-link:focus {
+  transform:translateY(0)
+}
+.lightbox {
+  border:0;
+  background:transparent;
+  padding:0;
+  width:min(900px,92vw);
+  max-height:95dvh;
+  color:white
+}
+.lightbox::backdrop {
+  background:#102234ed;
+  backdrop-filter:blur(8px)
+}
+.lightbox-content {
+  position:relative;
+  padding:45px 15px 10px
+}
+.lightbox-image {
+  position:relative;
+  height:70dvh
+}
+.lightbox-image img {
+  object-fit:contain
+}
+.icon-button {
+  border:1px solid #ffffff70;
+  border-radius:50%;
+  background:#1b354c;
+  color:white;
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center
+}
+.close-lightbox {
+  position:absolute;
+  right:15px;
+  top:0
+}
+.lightbox-controls {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:15px;
+  gap:15px
+}
+.lightbox-controls p {
+  text-align:center;
+  font-size:13px
+}
+.lightbox-controls small {
+  display:block;
+  opacity:.65;
+  font-size:10px;
+  margin-top:3px
+}
+.ceremony-hero {
+  text-align:center;
+  padding-block:35px 70px
+}
+.back-link {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:11px;
+  color:var(--muted);
+  margin-bottom:55px;
+  width:fit-content
+}
+.ceremony-hero h1 {
+  font-size:clamp(49px,6vw,78px);
+  line-height:1.12;
+  letter-spacing:-3px;
+  margin:21px 0 25px
+}
+.ceremony-hero>p:not(.eyebrow) {
+  font-size:11px;
+  color:var(--muted)
+}
+.ceremony-child {
+  font-size:29px;
+  margin:6px 0 25px
+}
+.ceremony-child span {
+  display:block;
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:4px;
+  margin-top:8px
+}
+.time-pill {
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:11px 19px;
+  background:#e9f0f7;
+  border:1px solid #d6e3ed;
+  border-radius:30px;
+  font-size:11px
+}
+.time-pill>span {
+  height:12px;
+  width:1px;
+  background:#b9cedf
+}
+.programme-layout {
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  gap:65px;
+  align-items:start
+}
+.programme-heading {
+  padding:0 0 28px
+}
+.programme-heading h2 {
+  font-size:36px;
+  margin-top:10px
+}
+.programme ol {
+  margin:0;
+  padding:0;
+  list-style:none;
+  border-top:1px solid var(--line)
+}
+.programme li {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  min-height:72px;
+  padding:15px 14px;
+  border-bottom:1px solid var(--line);
+  font-size:13px
+}
+.event-number {
+  font-family:var(--serif);
+  font-weight:700;
+  font-style:italic;
+  font-size:23px;
+  color:#537da5;
+  min-width:29px
+}
+.programme li.naming-event {
+  background:#d7e8f9;
+  color:#173f70;
+  font-weight:700;
+  border-radius:5px
+}
+.naming-event .event-number {
+  color:var(--blue)
+}
+.naming-event svg {
+  flex-shrink:0;
+  margin-left:auto
+}
+.programme-note {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:25px
+}
+.programme-note svg {
+  flex-shrink:0
+}
+.ceremony-aside {
+  display:grid;
+  gap:30px
+}
+.blessing-card {
+  border-radius:130px 130px 8px 8px;
+  background:#e5eef7;
+  padding:50px 30px 40px;
+  text-align:center
+}
+.blessing-star {
+  color:#83a5c5;
+  font-size:40px
+}
+.blessing-card .eyebrow {
+  font-size:8px;
+  letter-spacing:1.5px;
+  margin-top:20px
+}
+.blessing-card blockquote {
+  font-size:27px;
+  line-height:1.5;
+  margin:20px 0 22px;
+  font-style:italic
+}
+.blessing-card cite {
+  font:9px var(--sans);
+  letter-spacing:2px
+}
+.ceremony-meanings {
+  border-block:1px solid var(--line);
+  padding:25px 0
+}
+.ceremony-meanings h3 {
+  font-size:25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-top:14px
+}
+.ceremony-meanings h3 span {
+  font:11px var(--sans);
+  color:var(--muted)
+}
+.appreciation>svg {
+  color:#799dbd
+}
+.appreciation h3 {
+  font-size:24px;
+  margin:12px 0
+}
+.appreciation p {
+  font-size:12px;
+  color:var(--muted)
+}
+.ceremony-closing {
+  text-align:center;
+  padding-block:75px
+}
+.ceremony-closing>span {
+  font-size:45px;
+  color:#87a8c6
+}
+.ceremony-closing p {
+  font:italic 27px var(--serif);
+  margin:8px 0 20px
+}
+.ceremony-closing a {
+  font-size:11px;
+  display:inline-flex;
+  align-items:center;
+  gap:9px
+}
+
+.ceremony-invite em {
+  color:#a8d2ff
+}
+.ceremony-invite .button-primary {
+  background:#f5f9ff;
+  color:#173f70;
+  box-shadow:none
+}
+.ceremony-invite .button-primary:hover {
+  background:#dcecff
+}
+
+@media(min-width:1500px) {
+  .hero {
+  min-height:800px
+}
+
+}
+
+@media(max-width:1050px) {
+  .container {
+  width:calc(100% - 64px)
+}
+.site-header,.site-footer {
+  width:calc(100% - 64px)
+}
+.hero {
+  gap:35px;
+  min-height:650px
+}
+.hero h1 {
+  font-size:78px
+}
+.heading-star {
+  font-size:35px
+}
+.names-section {
+  gap:40px;
+  grid-template-columns:1fr
+}
+.name-meanings {
+  max-width:650px
+}
+.family-section {
+  gap:55px
+}
+.family-main {
+  height:390px
+}
+.family-small {
+  height:240px
+}
+.family-photos {
+  padding-right:65px
+}
+.album-grid {
+  gap:20px
+}
+.album-image {
+  height:225px
+}
+.album-photo:first-child .album-image {
+  min-height:450px
+}
+.programme-layout {
+  gap:35px
+}
+.blessing-card {
+  padding-inline:24px
+}
+.blessing-card blockquote {
+  font-size:24px
+}
+
+}
+
+@media(max-width:760px) {
+  .container {
+  width:calc(100% - 40px)
+}
+.site-header,.site-footer {
+  width:calc(100% - 40px)
+}
+.site-header {
+  height:80px
+}
+.wordmark {
+  font-size:37px
+}
+.header-note {
+  display:none
+}
+.site-header nav {
+  gap:23px;
+  font-size:11px
+}
+.hero {
+  grid-template-columns:1fr;
+  padding-block:45px 40px;
+  gap:30px
+}
+.hero-copy {
+  text-align:center
+}
+.hero-copy .eyebrow {
+  justify-content:center;
+  font-size:9px
+}
+.hero h1 {
+  font-size:76px;
+  letter-spacing:-4px;
+  margin-top:22px
+}
+.heading-star {
+  position:relative;
+  margin-left:5px;
+  bottom:14px;
+  font-size:36px
+}
+.hero-description {
+  font-size:12px
+}
+.scroll-note {
+  justify-content:center;
+  margin-top:25px
+}
+.hero-art {
+  width:min(420px,86%);
+  margin-inline:auto;
+  padding-top:15px
+}
+.hero-photo {
+  aspect-ratio:.92
+}
+.hero-photo img {
+  object-position:center 36%
+}
+.love-stamp {
+  left:-26px;
+  bottom:55px;
+  width:98px;
+  height:98px
+}
+.hero-sparkle {
+  right:-15px;
+  top:0;
+  font-size:53px
+}
+.hero-photo-note {
+  font-size:15px;
+  padding-right:18px
+}
+.joy-ribbon {
+  flex-wrap:wrap;
+  justify-content:center;
+  font-size:8px;
+  gap:10px 20px;
+  padding-block:20px
+}
+.joy-ribbon>span:last-child,.joy-ribbon>span:nth-last-child(2) {
+  display:none
+}
+.joy-ribbon [aria-hidden] {
+  font-size:14px
+}
+.section-space {
+  padding-block:65px
+}
+.section-intro h2 {
+  font-size:34px
+}
+.name-meanings {
+  gap:15px
+}
+.name-meanings article {
+  padding-left:17px
+}
+.name-meanings h3 {
+  font-size:29px;
+  gap:9px
+}
+.section-top {
+  display:block;
+  margin-bottom:30px
+}
+.section-top>p {
+  margin-top:22px
+}
+.album-grid {
+  grid-template-columns:1fr 1fr;
+  gap:25px 15px
+}
+.album-photo:first-child {
+  grid-row:auto;
+  grid-column:span 2
+}
+.album-photo:first-child .album-image {
+  height:410px;
+  min-height:0
+}
+.album-photo:first-child img {
+  object-position:center 32%
+}
+.album-image {
+  height:220px
+}
+.photo-caption {
+  font-size:10px
+}
+.family-section {
+  grid-template-columns:1fr;
+  gap:45px
+}
+.family-photos {
+  width:min(450px,100%);
+  margin:auto;
+  padding-right:90px
+}
+.family-main {
+  height:380px
+}
+.family-small {
+  height:255px
+}
+.family-copy h2 {
+  font-size:39px
+}
+.ceremony-invite {
+  padding:48px 23px;
+  margin-bottom:55px;
+  border-radius:16px
+}
+.ceremony-invite h2 {
+  font-size:35px
+}
+.ceremony-invite h2 em {
+  display:block
+}
+.ceremony-invite .eyebrow {
+  font-size:8px
+}
+.site-footer {
+  flex-wrap:wrap;
+  padding-block:25px;
+  gap:15px
+}
+.site-footer p {
+  font-size:9px
+}
+.site-footer>span {
+  flex-basis:100%;
+  justify-content:center;
+  font-size:9px
+}
+.ceremony-hero {
+  padding-bottom:45px
+}
+.back-link {
+  margin-bottom:38px
+}
+.ceremony-hero h1 {
+  font-size:49px;
+  letter-spacing:-2px
+}
+.ceremony-hero .eyebrow {
+  font-size:9px
+}
+.time-pill {
+  gap:8px;
+  padding-inline:13px;
+  font-size:10px
+}
+.programme-layout {
+  grid-template-columns:1fr;
+  gap:45px
+}
+.programme-heading h2 {
+  font-size:33px
+}
+.programme li {
+  font-size:12px;
+  gap:15px;
+  padding-inline:10px
+}
+.ceremony-aside {
+  grid-template-columns:1fr
+}
+.blessing-card {
+  max-width:450px;
+  margin-inline:auto;
+  padding:40px;
+  width:100%
+}
+.ceremony-closing {
+  padding-block:55px
+}
+.desktop-break {
+  display:none
+}
+
+}
+
+@media(max-width:390px) {
+  .site-header nav {
+  gap:15px;
+  font-size:10px
+}
+.hero h1 {
+  font-size:65px
+}
+.album-image {
+  height:185px
+}
+.name-meanings h3 {
+  font-size:25px
+}
+.joy-ribbon {
+  letter-spacing:1px;
+  gap:9px
+}
+.family-main {
+  height:330px
+}
+.family-small {
+  height:215px
+}
+.family-note {
+  font-size:17px
+}
+.time-pill {
+  font-size:9px
+}
+.ceremony-hero h1 {
+  font-size:43px
+}
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+  scroll-behavior:auto
+}
+*,*:before,*:after {
+  transition:none!important;
+  animation:none!important
+}
+
+}
+
