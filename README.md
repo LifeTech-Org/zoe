@@ -14,7 +14,7 @@ Open http://localhost:3000. Production: `npm run build` then `npm start`.
 ## Pages
 
 - `/`: introduction, name meanings, interactive photo album, parents, and ceremony invitation.
-- `/ceremony`: all 13 programme items, ceremony time, blessing, meanings, appreciation, and an updated downloadable SVG programme (1:00 PM–2:30 PM).
+- `/ceremony`: all 13 programme items, ceremony time, venue, blessing, meanings, appreciation, and an updated downloadable SVG programme (1:00 PM–2:30 PM).
 
 ## Organization
 
@@ -25,7 +25,7 @@ Open http://localhost:3000. Production: `npm run build` then `npm start`.
 
 The design uses a shared powder-blue/ivory palette, consistent spacing, serif headings, responsive layouts, keyboard focus states, and reduced-motion support. Fonts use system fallbacks, so the build does not depend on an external font service.
 
-All seven supplied HEIC photographs were converted to JPEG; originals remain untouched. The programme’s unfilled speaker placeholders are omitted from the displayed list. No date or venue has been invented. Search indexing is disabled through metadata by default. There is no authentication; deploy privately if access must be restricted.
+All seven supplied HEIC photographs were converted to JPEG; originals remain untouched. The programme’s unfilled speaker placeholders are omitted from the displayed list. The venue (Behind Second Poultry, De Gold Hotel, Eleweran, Ede Road, Ile Ife) is shown on `/ceremony` with a maps link; no date has been invented. Search indexing is disabled through metadata by default. There is no authentication; deploy privately if access must be restricted.
 
 ## Checks
 

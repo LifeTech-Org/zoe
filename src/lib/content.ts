@@ -1,4 +1,5 @@
 export const child = { name: 'Zoe Ayomikun', surname: 'AYETIGBO', fullName: 'Zoe Ayomikun AYETIGBO' };
+export const venue = { lines: ['Behind Second Poultry, De Gold Hotel,', 'Eleweran, Ede Road, Ile Ife.'], mapUrl: 'https://www.google.com/maps/search/?api=1&query=De+Gold+Hotel+Eleweran+Ede+Road+Ile+Ife' };
 export const programme = [
   'Arrival of Guests & Seating', 'Opening Prayer', 'Welcome Address', 'Praise & Worship',
   'Bible Reading / Brief Exhortation', 'Naming of the Baby — Zoe Ayomikun AYETIGBO',

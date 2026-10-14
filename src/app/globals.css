@@ -717,6 +717,49 @@ h2 {
   width:1px;
   background:#b9cedf
 }
+.venue-card {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  width:fit-content;
+  margin:18px auto 0;
+  padding:16px 24px 16px 16px;
+  text-align:left;
+  background:#ffffffb3;
+  border:1px solid #d6e3ed;
+  border-radius:18px;
+  box-shadow:0 10px 26px #25466612;
+  transition:transform .3s,box-shadow .3s
+}
+.venue-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 16px 32px #2546661f
+}
+.venue-pin {
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#e1edf9;
+  color:#3976b5
+}
+.venue-pin svg {
+  animation:nudge 2.2s ease-in-out infinite
+}
+.venue-text {
+  font-size:13px;
+  line-height:1.55
+}
+.venue-text strong {
+  display:block;
+  color:#3976b5;
+  font-size:14px
+}
+.venue-text>span {
+  display:block
+}
 .programme-layout {
   display:grid;
   grid-template-columns:1.5fr 1fr;
@@ -1021,6 +1064,9 @@ h2 {
 }
 .hero-copy>:nth-child(6),.ceremony-hero>:nth-child(6) {
   animation-delay:.5s
+}
+.ceremony-hero>:nth-child(7) {
+  animation-delay:.6s
 }
 .hero-art {
   animation:rise 1.2s .25s cubic-bezier(.2,.7,.2,1) backwards
@@ -1708,6 +1754,17 @@ to {
   gap:8px;
   padding-inline:13px;
   font-size:10px
+}
+.venue-card {
+  gap:13px;
+  padding:13px 18px 13px 13px
+}
+.venue-pin {
+  width:42px;
+  height:42px
+}
+.venue-text {
+  font-size:12px
 }
 .programme-layout {
   grid-template-columns:1fr;
