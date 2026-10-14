@@ -6,6 +6,7 @@ export const programme = [
   'Photo Moments / Family Greetings', 'Refreshments & Reception', 'Parents’ Appreciation',
   'Vote of Thanks', 'Closing Prayer',
 ];
+export const joyPhrases = ['A little miracle', 'A whole lot of love', 'Our joy is complete', 'The sweetest beginning'];
 export const photos = [
   { id: '9962', alt: 'Zoe sleeping peacefully in her blue knitted outfit', caption: 'Our little daydream', portrait: true },
   { id: '9919', alt: 'Zoe wrapped in a soft blanket, wearing a cream knitted outfit', caption: 'The sweetest little hello', portrait: false },
